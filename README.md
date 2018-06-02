@@ -68,9 +68,9 @@ To build your .NET Framework application with CodeBuild you use a build spec, wh
 2. Copy the buildspec.yml contents to buildspec.yml
 3. Save the changes to the buildspec.yml and use the following commands to add the file to the CodeCommit repository:
 
-git add . 
-git commit -m "Added a build spec file"
-git push
+&nbsp; git add . <br />
+&nbsp; git commit -m "Added a build spec file"
+&nbsp; git push
 
 # Step 5: Configure CodeBuild
 
