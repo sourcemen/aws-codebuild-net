@@ -79,5 +79,5 @@ At this point, we have a Docker image with Visual Studio Build Tools installed a
 5. For Environment Image, choose Specify a Docker image.
 6. For Environment type, choose Windows.
 7. For Custom image type, choose Amazon ECR.
-8. For Amazon ECR repository, choose the Docker image with the Visual Studio Build Tools installed, buildtools2017. Your configuration should look like the image below:
-9. Choose Continue and then Save and Build to create your CodeBuild project and start your first build. You can monitor the status of the build in the console. You can also configure notifications that will notify subscribers whenever builds succeed, fail, go from one phase to another, or any combination of these events.
+8. For Amazon ECR repository, choose the Docker image with the Visual Studio Build Tools installed, buildtools2017. Your configuration should look like <a href="https://github.com/sourcemen/aws-codebuild-net/blob/master/images/codebuild-win2.png">this</a> image.
+9. Choose Continue and then Save and Build to create your CodeBuild project and start your first build. You can monitor the status of the build in the console. You can also configure notifications that will notify subscribers whenever builds succeed, fail, go from one phase to another, or any combination of these events. Check <a href="https://github.com/sourcemen/aws-codebuild-net/blob/master/images/codebuild-win3.png">this image.
