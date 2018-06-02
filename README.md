@@ -56,6 +56,10 @@ To build your .NET Framework application with CodeBuild you use a build spec, wh
 2. Copy the buildspec.yml contents to buildspec.yml
 3. Save the changes to the buildspec.yml and use the following commands to add the file to the CodeCommit repository:
 
+git add . 
+git commit -m "Added a build spec file"
+git push
+
 # Step 5: Configure CodeBuild
 
 At this point, we have a Docker image with Visual Studio Build Tools installed and stored in the Amazon ECR registry. We also have a sample ASP.NET Framework application in a CodeCommit repository. Now we are going to set up CodeBuild to build the ASP.NET Framework application.
