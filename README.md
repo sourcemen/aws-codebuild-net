@@ -27,9 +27,8 @@ docker run -it buildtools2017
 aws ecr get-login
 8. In the same command prompt window, copy and paste the following commands:
 
-docker tag buildtools2017:latest [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/ buildtools2017:latest
-
-docker push [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/buildtools2017:latest
+  docker tag buildtools2017:latest [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/ buildtools2017:latest
+  docker push [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/buildtools2017:latest
 
 Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [YOUR REGION] with the region you are using.
 
@@ -39,16 +38,16 @@ Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [Y
 2. In the CodeCommit console, create a repository named DotNetFrameworkSampleApp. On the Configure email notifications page, choose Skip.
 3. Clone a .NET Framework Docker sample application from GitHub. The repository includes a sample ASP.NET Framework that we’ll use to demonstrate our custom build environment.On the EC2 instance, open a command prompt and execute the following commands:
 
-git clone https://github.com/Microsoft/dotnet-framework-docker-samples.git
-cd dotnet-framework-docker-samples
-del /Q /S .git
-cd aspnetapp
-git init
-git add . 
-git commit -m "First commit"
-git remote add origin https://git-codecommit.[YOURREGION].amazonaws.com/v1/repos/DotNetFrameworkSampleApp
-git remote -v
-git push -u origin master
+  git clone https://github.com/Microsoft/dotnet-framework-docker-samples.git
+  cd dotnet-framework-docker-samples
+  del /Q /S .git
+  cd aspnetapp
+  git init
+  git add . 
+  git commit -m "First commit"
+  git remote add origin https://git-codecommit.[YOURREGION].amazonaws.com/v1/repos/DotNetFrameworkSampleApp
+  git remote -v
+  git push -u origin master
 
 4. Navigate to the CodeCommit repository and confirm that the files you just pushed are there.
 # Step 4: Configure build spec
