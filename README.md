@@ -39,15 +39,25 @@ Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [Y
 3. Clone a .NET Framework Docker sample application from GitHub. The repository includes a sample ASP.NET Framework that we’ll use to demonstrate our custom build environment.On the EC2 instance, open a command prompt and execute the following commands:
 
   git clone https://github.com/Microsoft/dotnet-framework-docker-samples.git
+  
   cd dotnet-framework-docker-samples
+  
   del /Q /S .git
+  
   cd aspnetapp
+  
   git init
-  git add . 
+  
+  git add .
+  
   git commit -m "First commit"
+  
   git remote add origin https://git-codecommit.[YOURREGION].amazonaws.com/v1/repos/DotNetFrameworkSampleApp
+  
   git remote -v
+  
   git push -u origin master
+  
 
 4. Navigate to the CodeCommit repository and confirm that the files you just pushed are there.
 # Step 4: Configure build spec
