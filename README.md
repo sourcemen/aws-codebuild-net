@@ -26,8 +26,11 @@ docker run -it buildtools2017
 7. Execute the following command to generate authentication details for our registry to the local Docker engine. Make sure you have permissions to the Amazon ECR registry before you execute the command.
 aws ecr get-login
 8. In the same command prompt window, copy and paste the following commands:
+
 docker tag buildtools2017:latest [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/ buildtools2017:latest
+
 docker push [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/buildtools2017:latest
+
 Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [YOUR REGION] with the region you are using.
 
 # Step 3: Configure AWS CodeCommit
