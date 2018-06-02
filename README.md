@@ -14,8 +14,8 @@ When the instance is running, connect to it using Remote Desktop.
 
 1. Open an elevated command prompt (that is, right-click on your favorite shell and choose Run as Administrator).
 2. Create a directory:
-mkdir C:\BuildTools
-cd C:\BuildTools
+mkdir C:\BuildTools <br />
+cd C:\BuildTools <br />
 3. Save the Dockerfile content to C:\BuildTools\Dockerfile
 
 4. Run the following command in that directory. This process can take a while. It depends on the size of EC2 instance you launched. In my tests, a t2.2xlarge takes less than 30 minutes to build the image and produces an approximately 15 GB image.
@@ -27,8 +27,8 @@ docker run -it buildtools2017
 aws ecr get-login
 8. In the same command prompt window, copy and paste the following commands:
 
-  docker tag buildtools2017:latest [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/ buildtools2017:latest
-  docker push [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/buildtools2017:latest
+  docker tag buildtools2017:latest [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/ buildtools2017:latest <br />
+  docker push [YOUR ACCOUNT #].dkr.ecr.[YOUR REGION].amazonaws.com/buildtools2017:latest <br />
 
 Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [YOUR REGION] with the region you are using.
 
@@ -38,25 +38,16 @@ Note: Make sure you replace [YOUR ACCOUNT #] with your AWS account number and [Y
 2. In the CodeCommit console, create a repository named DotNetFrameworkSampleApp. On the Configure email notifications page, choose Skip.
 3. Clone a .NET Framework Docker sample application from GitHub. The repository includes a sample ASP.NET Framework that we’ll use to demonstrate our custom build environment.On the EC2 instance, open a command prompt and execute the following commands:
 
-  git clone https://github.com/Microsoft/dotnet-framework-docker-samples.git
-  
-  cd dotnet-framework-docker-samples
-  
-  del /Q /S .git
-  
-  cd aspnetapp
-  
-  git init
-  
-  git add .
-  
-  git commit -m "First commit"
-  
-  git remote add origin https://git-codecommit.[YOURREGION].amazonaws.com/v1/repos/DotNetFrameworkSampleApp
-  
-  git remote -v
-  
-  git push -u origin master
+  git clone https://github.com/Microsoft/dotnet-framework-docker-samples.git <br />
+  cd dotnet-framework-docker-samples <br />
+  del /Q /S .git <br />
+  cd aspnetapp <br />
+  git init <br />
+  git add . <br />
+  git commit -m "First commit" <br />
+  git remote add origin https://git-codecommit.[YOURREGION].amazonaws.com/v1/repos/DotNetFrameworkSampleApp <br />
+  git remote -v <br />
+  git push -u origin master <br />
   
 
 4. Navigate to the CodeCommit repository and confirm that the files you just pushed are there.
@@ -69,8 +60,8 @@ To build your .NET Framework application with CodeBuild you use a build spec, wh
 3. Save the changes to the buildspec.yml and use the following commands to add the file to the CodeCommit repository:
 
 &nbsp; git add . <br />
-&nbsp; git commit -m "Added a build spec file"
-&nbsp; git push
+&nbsp; git commit -m "Added a build spec file" <br />
+&nbsp; git push <br />
 
 # Step 5: Configure CodeBuild
 
